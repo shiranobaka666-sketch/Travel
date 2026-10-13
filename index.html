@@ -195,6 +195,15 @@
     .nav-link { color: var(--blue); }
     .stop { background: var(--panel); border-color: var(--line); }
     .return-card { border-color: #a9c6ca; background: linear-gradient(135deg, rgba(40,122,146,.09), var(--panel)); }
+    .return-card ol { color: #46555a; }
+    .route-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 0 14px; }
+    .route-option { display: block; padding: 14px 15px; color: var(--ink); text-decoration: none; background: #fffdf9; border: 1px solid #c9b9aa; border-radius: 14px; box-shadow: 0 6px 16px rgba(74,53,37,.05); }
+    .route-option.active { border-color: var(--day2); box-shadow: inset 0 0 0 1px var(--day2), 0 6px 16px rgba(74,53,37,.05); }
+    .route-option.friend { border-color: #d6a2b2; }
+    .route-option span { display: block; color: var(--day2); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .route-option strong { display: block; margin-top: 4px; font-size: .92rem; line-height: 1.35; }
+    .route-option small { display: block; margin-top: 6px; color: var(--muted); font-size: .76rem; }
+    @media (max-width: 760px) { .route-options { grid-template-columns: 1fr; } }
     .footer { border-color: var(--line); }
   </style>
 </head>
@@ -267,18 +276,22 @@
 
     <section class="day" data-day="2">
       <div class="day-head"><h2 class="day-title">DAY 02 · 老城 → 珠海返深</h2><div class="day-subtitle">核心任务：按20:23车票到达珠海站 · 朋友演唱会为独立支线</div></div>
+      <div class="route-options" aria-label="18日路线选项">
+        <a class="route-option active" href="#your-route"><span>你的路线</span><strong>老城 → 金宝来取行李 → 横琴口岸 → 珠海站</strong><small>按20:23 G6334 倒排</small></a>
+        <a class="route-option friend" href="#friend-route"><span>朋友路线</span><strong>金宝来 → 银河综艺馆 → 演唱会</strong><small>到演唱会开始即结束</small></a>
+      </div>
       <div class="route-strip" aria-label="18日路线">
-        <div class="stop">澳门酒店</div><div class="arrow">›</div><div class="stop">马庆康</div><div class="arrow">›</div><div class="stop">疯堂斜巷</div><div class="arrow">›</div><div class="stop">大三巴</div><div class="arrow">›</div><div class="stop">银河</div><div class="arrow">›</div><div class="stop">横琴口岸</div><div class="arrow">›</div><div class="stop">深圳</div>
+        <div class="stop">金宝来酒店</div><div class="arrow">›</div><div class="stop">马庆康</div><div class="arrow">›</div><div class="stop">疯堂斜巷</div><div class="arrow">›</div><div class="stop">大三巴</div><div class="arrow">›</div><div class="stop">金宝来取行李</div><div class="arrow">›</div><div class="stop">横琴口岸</div><div class="arrow">›</div><div class="stop">珠海站</div>
       </div>
       <div class="timeline">
-        <article class="event"><time class="time">10:30</time><div class="event-card"><h3>离开澳门酒店</h3><p>先退房并把行李寄存在酒店，只带演唱会需要的随身物品。</p><div class="tags"><span class="tag pending">酒店待补充</span></div></div></article>
+        <article class="event" id="your-route"><time class="time">10:30</time><div class="event-card"><h3>金宝来酒店出发</h3><p>酒店位于澳门国际机场对面，先退房并寄存行李；前往澳门半岛老城约15—20分钟车程。</p><div class="tags"><span class="tag">酒店已确定</span><span class="tag">氹仔鸡颈马路1048—1106号</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E9%87%91%E5%AE%9D%E6%9D%A5%E9%85%92%E5%BA%97">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">11:00</time><div class="event-card"><h3>马庆康南天咖啡室</h3><p>控制在40分钟内。建议点双蛋叉烧饭/滑蛋叉烧、星洲炒公仔面或西多士。</p><div class="tags"><span class="tag">早午餐</span><span class="tag">排队超20分钟就简化</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E9%A9%AC%E5%BA%86%E5%BA%B7%E5%8D%97%E5%A4%A9%E5%92%96%E5%95%A1%E5%AE%A4">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">11:45</time><div class="event-card optional"><h3>疯堂斜巷</h3><p>文艺街区快速散步拍照，停留约20分钟。时间紧张时第一个取消。</p><div class="tags"><span class="tag">待定景点</span><span class="tag pending">可取消</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E7%96%AF%E5%A0%82%E6%96%9C%E5%B7%B7%20%E6%BE%B3%E9%97%A8">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">12:20</time><div class="event-card"><h3>大三巴牌坊</h3><p>主景拍照约30分钟，不再延伸议事亭前地，避免返程堵车。</p><div class="tags"><span class="tag">必去</span><span class="tag">约30分钟</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E5%A4%A7%E4%B8%89%E5%B7%B4%E7%89%8C%E5%9D%8A">打开高德导航 ↗</a></div></article>
-        <article class="event"><time class="time">12:55</time><div class="event-card critical"><h3>打车返回银河</h3><p>这是18日老城路线的硬截止时间；打车按25—35分钟预留。</p><div class="tags"><span class="tag must">硬截止时间</span></div></div></article>
-        <article class="event"><time class="time">13:30</time><div class="event-card optional"><h3>朋友演唱会支线：银河综艺馆</h3><p>朋友在此集合，14:00进行VIP报到及入场准备；你本人不参加，可继续老城路线或提前取行李。</p><div class="tags"><span class="tag">朋友支线</span><span class="tag">你不参加</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%BE%B3%E9%97%A8%E9%93%B6%E6%B2%B3%E7%BB%BC%E8%89%BA%E9%A6%86">打开高德导航 ↗</a></div></article>
+        <article class="event"><time class="time">12:55</time><div class="event-card critical"><h3>老城 → 金宝来酒店</h3><p>游览结束后先回酒店取行李，不去银河；车程约15—20分钟。</p><div class="tags"><span class="tag must">你的主线</span></div></div></article>
+        <article class="event" id="friend-route"><time class="time">13:30</time><div class="event-card optional"><h3>朋友演唱会支线：银河综艺馆</h3><p>朋友从金宝来酒店前往银河，14:00进行VIP报到及入场准备；此支线到演唱会开始即结束。</p><div class="tags"><span class="tag">朋友支线</span><span class="tag">你不参加</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%BE%B3%E9%97%A8%E9%93%B6%E6%B2%B3%E7%BB%BC%E8%89%BA%E9%A6%86">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">14:00—17:00</time><div class="event-card optional"><h3>你：自由活动 / 取行李</h3><p>建议最晚17:00回酒店取行李，随后前往横琴口岸；朋友支线到演唱会开始即结束，不安排朋友后续交通。</p><div class="tags"><span class="tag">你的主线</span><span class="tag must">17:00前取行李</span></div></div></article>
-        <article class="event"><time class="time">17:00</time><div class="event-card critical"><h3>取行李 → 横琴口岸 → 珠海站</h3><p>按20:23发车倒排：建议17:00离开酒店，预留通关、前往珠海站和进站安检时间，目标19:30前到珠海站。</p><div class="tags"><span class="tag must">按车票倒排</span><span class="tag">目标19:30到站</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%A8%AA%E7%90%B4%E5%8F%A3%E5%B2%B8">打开高德导航 ↗</a></div></article>
+        <article class="event"><time class="time">17:00</time><div class="event-card critical"><h3>金宝来取行李 → 横琴口岸 → 珠海站</h3><p>按20:23发车倒排：建议17:00从酒店取行李出发，走横琴口岸，预留通关、前往珠海站和进站安检时间，目标19:30前到珠海站。</p><div class="tags"><span class="tag must">按车票倒排</span><span class="tag">目标19:30到站</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%A8%AA%E7%90%B4%E5%8F%A3%E5%B2%B8">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">20:23</time><div class="event-card critical"><h3>珠海 → 深圳北 · G6334</h3><p>20:23发车，22:15到深圳北；这是你的固定返程车票。朋友演唱会支线不延伸到此。</p><div class="tags"><span class="tag must">G6334</span><span class="tag must">20:23—22:15</span></div></div></article>
       </div>
     </section>
