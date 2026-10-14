@@ -231,6 +231,41 @@
       .day[data-day="2"] .timeline { display: grid; grid-template-columns: 1fr; }
       .day[data-day="2"] .timeline::before { left: 57px; }
       .day[data-day="2"] .event, .day[data-day="2"] .event:nth-child(7), .day[data-day="2"] .event:nth-child(8), .day[data-day="2"] .event:nth-child(9), .day[data-day="2"] .event:nth-child(10) { grid-column: 1; grid-row: auto; }
+      .shell { padding: 10px 10px 58px; }
+      h1 { font-size: clamp(2rem, 12vw, 3.2rem); }
+      .lead { font-size: .9rem; }
+      .quick-grid { gap: 7px; margin: 12px 0; }
+      .quick-card { padding: 11px; min-height: 88px; border-radius: 10px; }
+      .quick-card strong { font-size: .9rem; }
+      .quick-card em { font-size: .7rem; }
+      .event { grid-template-columns: 42px 1fr; gap: 14px; }
+      .timeline::before { left: 50px; }
+      .event-card { padding: 13px; border-radius: 13px; }
+      .event-card h3 { font-size: .94rem; }
+      .event-card p { font-size: .82rem; }
+      .time { font-size: .72rem; }
+      .photo-guide { padding: 15px; margin-top: 24px; }
+      .photo-link { min-height: 98px; padding: 13px; }
+      .return-card { padding: 15px; }
+      .shell { padding-left: 10px; padding-right: 10px; }
+      .masthead { padding-bottom: 20px; }
+      h1 { font-size: clamp(2.2rem, 13vw, 3.6rem); }
+      .quick-grid { gap: 8px; }
+      .quick-card { padding: 12px; min-height: 92px; }
+      .quick-card strong { font-size: .93rem; }
+      .sticky-tabs { margin-left: -2px; margin-right: -2px; }
+      .tab { padding: 11px 8px; font-size: .82rem; }
+      #map { min-height: 330px; height: 55vh; }
+      .day-head { display: block; }
+      .day-subtitle { max-width: none; margin-top: 6px; text-align: left; }
+      .event { grid-template-columns: 43px 1fr; gap: 15px; }
+      .time { font-size: .72rem; }
+      .event-card { padding: 13px; border-radius: 14px; }
+      .event-card h3 { font-size: .94rem; }
+      .event-card p { font-size: .82rem; }
+      .photo-guide { padding: 15px; }
+      .photo-guide-head p { margin-top: 8px; }
+      .photo-link { min-height: 104px; }
     }
     .footer { border-color: var(--line); }
   </style>
@@ -323,7 +358,7 @@
         <article class="event"><time class="time">12:05</time><div class="event-card optional"><h3>两人共同拍照：圣安多尼堂 → 衣湾斜巷</h3><p>老城西侧拍照段，停留约25分钟；衣湾斜巷时间紧张时机动。</p><div class="tags"><span class="tag">共同路线</span><span class="tag pending">衣湾斜巷可机动</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://v.douyin.com/YYeHsvXCBWg/">打开澳门出片指南 ↗</a></div></article>
         <article class="event"><time class="time">13:00</time><div class="event-card critical"><h3>你：老城 → 公交前往氹仔</h3><p>朋友去银河后，你乘澳门公交前往氹仔旧城区，车程约30—35分钟；不带行李。</p><div class="tags"><span class="tag must">你的主线</span><span class="tag">公共交通</span></div></div></article>
         <article class="event" id="friend-route"><time class="time">13:30</time><div class="event-card optional"><h3>朋友演唱会支线：银河综艺馆</h3><p>朋友从金宝来酒店前往银河，14:00进行VIP报到及入场准备；此支线到演唱会开始即结束。</p><div class="tags"><span class="tag">朋友支线</span><span class="tag">你不参加</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%BE%B3%E9%97%A8%E9%93%B6%E6%B2%B3%E7%BB%BC%E8%89%BA%E9%A6%86">打开高德导航 ↗</a></div></article>
-        <article class="event friend-finish"><time class="time">18:30</time><div class="event-card optional"><h3>朋友：演唱会开始</h3><p>朋友进入演唱会流程；你的路线不等待散场，各自行动。</p><div class="tags"><span class="tag">朋友支线终点</span></div></div></article>
+        <article class="event friend-finish"><time class="time">18:30</time><div class="event-card optional"><h3>朋友：演唱会开始</h3><p>朋友进入演唱会流程；朋友自行过夜，网站不再安排演唱会后的交通。</p><div class="tags"><span class="tag">朋友支线终点</span><span class="tag">自行过夜</span></div></div></article>
         <article class="event"><time class="time">13:35—16:10</time><div class="event-card optional"><h3>你：氹仔旧城区 → 龙环葡韵 → 威尼斯人 / 巴黎人</h3><p>全程步行＋公交：官也街拍照约50分钟，步行到龙环葡韵约10—15分钟，再乘公交到威尼斯人 / 巴黎人约20—25分钟。</p><div class="tags"><span class="tag">你的自由活动</span><span class="tag">公共交通＋步行</span></div></div></article>
         <article class="event"><time class="time">16:10—16:40</time><div class="event-card critical"><h3>公交返回金宝来酒店取行李</h3><p>从威尼斯人 / 巴黎人乘公交或轻轨返回机场站方向约15—20分钟；最后才取行李，避免带着行李游玩。</p><div class="tags"><span class="tag must">返程前最后一步</span><span class="tag">公共交通</span></div></div></article>
         <article class="event"><time class="time">17:00</time><div class="event-card critical"><h3>金宝来取行李 → 轻轨 / 公交 → 横琴口岸</h3><p>按20:23车票倒排：取行李后前往莲花站 / 横琴口岸方向，公共交通约10—20分钟，预留通关时间。</p><div class="tags"><span class="tag must">按车票倒排</span><span class="tag">目标19:30前到珠海站</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%A8%AA%E7%90%B4%E5%8F%A3%E5%B2%B8">打开高德导航 ↗</a></div></article>
@@ -340,24 +375,17 @@
       </div>
     </section>
 
-    <h2 class="section-title">三家想吃的店</h2>
-    <section class="food-grid">
-      <article class="food"><span class="num">01 · 机动</span><h3>百乐门粉面店</h3><p>17日通关顺利才去。地址：祐汉新村第一街16号。</p></article>
-      <article class="food"><span class="num">02 · 17日</span><h3>安德鲁蛋挞</h3><p>威尼斯人3楼分店，和巴黎人、商场顺路组合。</p></article>
-      <article class="food"><span class="num">03 · 18日</span><h3>马庆康南天咖啡室</h3><p>俾利喇街65-A，作为老城路线第一站。</p></article>
-    </section>
-
     <section class="return-card">
-      <h2>18日晚返深方案：先改签，再排接驳</h2>
+      <h2>18日晚返深方案：取行李后再接驳</h2>
       <ol>
         <li>行李白天寄存在金宝来酒店（澳门国际机场对面）。</li>
         <li>20:23 珠海→深圳北 G6334 为固定车次，不改签。</li>
         <li>建议17:00左右从金宝来酒店取行李出发，预留横琴口岸通关与到珠海站时间。</li>
-        <li>朋友演唱会结束时间不纳入你的返程安排；你需要独立前往珠海站。</li>
+        <li>朋友演唱会支线在18:30开始时结束，朋友自行过夜，不影响你的返程。</li>
       </ol>
     </section>
 
-    <footer class="footer">版本：2026-10-13 · 车票时间为硬约束；酒店已更新为金宝来酒店，并区分你的返程主线与朋友演唱会支线。通关时长仍需现场确认。</footer>
+    <footer class="footer">版本：2026-10-14 · 车票时间为硬约束；已优化手机端双路线、拍照动线和朋友自行过夜安排。</footer>
   </main>
 
   <script>
