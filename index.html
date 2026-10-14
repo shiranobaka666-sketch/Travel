@@ -205,6 +205,17 @@
     .route-option span { display: block; color: var(--day2); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
     .route-option strong { display: block; margin-top: 4px; font-size: .92rem; line-height: 1.35; }
     .route-option small { display: block; margin-top: 6px; color: var(--muted); font-size: .76rem; }
+    .photo-guide { margin-top: 34px; padding: 20px; border: 1px solid #d8c4b4; border-radius: 18px; background: #fffaf3; }
+    .photo-guide-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; }
+    .photo-guide h2 { margin: 3px 0 0; font-family: Georgia, "Songti SC", serif; font-size: 1.7rem; }
+    .photo-guide-head p { max-width: 360px; margin: 0; color: var(--muted); font-size: .82rem; }
+    .section-kicker { color: var(--day1); font-size: .7rem; font-weight: 900; letter-spacing: .16em; }
+    .photo-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+    .photo-link { display: block; min-height: 118px; padding: 16px; color: var(--ink); text-decoration: none; border-radius: 14px; background: linear-gradient(135deg, #ecd7c4, #f8eee3); border: 1px solid #d4b9a3; }
+    .photo-link:nth-child(2) { background: linear-gradient(135deg, #ead5dd, #fbf0f2); border-color: #d5b2bd; }
+    .photo-link span, .photo-link small { display: block; color: #806d61; font-size: .75rem; }
+    .photo-link strong { display: block; margin: 8px 0 7px; font-size: 1.05rem; }
+    @media (max-width: 760px) { .photo-guide-head, .photo-links { grid-template-columns: 1fr; display: grid; } }
     @media (max-width: 760px) { .route-options { grid-template-columns: 1fr; } }
     .footer { border-color: var(--line); }
   </style>
@@ -263,7 +274,7 @@
     <section class="day active" data-day="1">
       <div class="day-head"><h2 class="day-title">DAY 01 · 路氹</h2><div class="day-subtitle">核心任务：17:30前到银河</div></div>
       <div class="route-strip" aria-label="17日路线">
-        <div class="stop">朗华家园</div><div class="arrow">›</div><div class="stop">深圳北</div><div class="arrow">›</div><div class="stop">广州南中转</div><div class="arrow">›</div><div class="stop">珠海站</div><div class="arrow">›</div><div class="stop">拱北</div><div class="arrow">›</div><div class="stop">金宝来酒店</div><div class="arrow">›</div><div class="stop">巴黎人</div><div class="arrow">›</div><div class="stop">安德鲁</div><div class="arrow">›</div><div class="stop">银河</div>
+        <div class="stop">朗华家园</div><div class="arrow">›</div><div class="stop">深圳北</div><div class="arrow">›</div><div class="stop">广州南中转</div><div class="arrow">›</div><div class="stop">珠海站</div><div class="arrow">›</div><div class="stop">拱北</div><div class="arrow">›</div><div class="stop">金宝来酒店</div><div class="arrow">›</div><div class="stop">新濠影汇</div><div class="arrow">›</div><div class="stop">巴黎人</div><div class="arrow">›</div><div class="stop">安德鲁</div><div class="arrow">›</div><div class="stop">银河</div>
       </div>
       <div class="timeline">
         <article class="event"><time class="time">08:20</time><div class="event-card"><h3>朗华家园 → 深圳北站</h3><p>建议08:15—08:25叫车；平吉大道到深圳北站按45—60分钟预留，目标09:20前到站，留出安检和检票时间。</p><div class="tags"><span class="tag">打车45—60分钟</span><span class="tag">目标09:20到站</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%9C%97%E5%8D%8E%E5%AE%B6%E5%9B%AD">打开高德导航 ↗</a></div></article>
@@ -272,7 +283,8 @@
         <article class="event"><time class="time">12:15</time><div class="event-card"><h3>珠海站 → 拱北口岸 → 澳门</h3><p>珠海站步行到拱北口岸，周末按45—75分钟预留通关；预计13:15—13:45进入澳门。</p><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%8B%B1%E5%8C%97%E5%8F%A3%E5%B2%B8&city=%E7%8F%A0%E6%B5%B7">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">机动</time><div class="event-card optional"><h3>百乐门粉面店</h3><p>通关较早时在拱北附近顺路吃；若15:00后才进入澳门，直接前往金宝来酒店，不影响后续路线。</p><div class="tags"><span class="tag">凤爪鸡翼捞粗面</span><span class="tag">牛腩牛筋面</span><span class="tag pending">视通关时间决定</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%BE%B3%E9%97%A8%E7%99%BE%E4%B9%90%E9%97%A8%E7%B2%89%E9%9D%A2%E5%BA%97">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">约15:00</time><div class="event-card"><h3>金宝来酒店寄存行李 / 办理入住</h3><p>酒店位于澳门国际机场对面：氹仔鸡颈马路1048—1106号。入住后再前往巴黎人和威尼斯人，动线更顺。</p><div class="tags"><span class="tag">酒店已确定</span><span class="tag">机场对面</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E9%87%91%E5%AE%9D%E6%9D%A5%E9%85%92%E5%BA%97">打开高德导航 ↗</a></div></article>
-        <article class="event"><time class="time">15:30</time><div class="event-card"><h3>澳门巴黎人铁塔</h3><p>以外部拍照为主。若时间充足再登观景台，不建议排队过久。</p><div class="tags"><span class="tag">预计30—45分钟</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%BE%B3%E9%97%A8%E5%B7%B4%E9%BB%8E%E4%BA%BA%E9%93%81%E5%A1%94">打开高德导航 ↗</a></div></article>
+        <article class="event"><time class="time">15:30</time><div class="event-card"><h3>新濠影汇拍照</h3><p>从金宝来酒店先去新濠影汇，优先拍你收藏的机位；停留约30分钟，再前往巴黎人。</p><div class="tags"><span class="tag">拍照重点</span><span class="tag">约30分钟</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%96%B0%E6%BF%A0%E5%BD%B1%E6%B1%87">打开高德导航 ↗</a></div></article>
+        <article class="event"><time class="time">16:05</time><div class="event-card"><h3>澳门巴黎人铁塔</h3><p>以外部拍照为主。若时间充足再登观景台，不建议排队过久。</p><div class="tags"><span class="tag">预计25—30分钟</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%BE%B3%E9%97%A8%E5%B7%B4%E9%BB%8E%E4%BA%BA%E9%93%81%E5%A1%94">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">16:15</time><div class="event-card"><h3>威尼斯人安德鲁蛋挞</h3><p>直接去威尼斯人3楼分店。商场只顺路逛，不安排正式购物任务。</p><div class="tags"><span class="tag">安德鲁蛋挞</span><span class="tag">商场机动</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E5%AE%89%E5%BE%B7%E9%B2%81%E9%A5%BC%E5%BA%97%20%E5%A8%81%E5%B0%BC%E6%96%AF%E4%BA%BA">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">17:00</time><div class="event-card critical"><h3>前往银河综艺馆</h3><p>不论前面完成到哪一步，17:00都停止游览并出发。</p><div class="tags"><span class="tag must">硬截止时间</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%BE%B3%E9%97%A8%E9%93%B6%E6%B2%B3%E7%BB%BC%E8%89%BA%E9%A6%86">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">17:30</time><div class="event-card critical"><h3>抵达场馆</h3><p>确认入口、安检、洗手间；18:00按你的计划入场，19:30演出开始。</p><div class="tags"><span class="tag must">必须到达</span><span class="tag">19:30开演</span></div></div></article>
@@ -286,18 +298,27 @@
         <a class="route-option friend" href="#friend-route"><span>朋友路线</span><strong>金宝来 → 银河综艺馆 → 演唱会</strong><small>到演唱会开始即结束</small></a>
       </div>
       <div class="route-strip" aria-label="18日路线">
-        <div class="stop">金宝来酒店</div><div class="arrow">›</div><div class="stop">马庆康</div><div class="arrow">›</div><div class="stop">疯堂斜巷</div><div class="arrow">›</div><div class="stop">大三巴</div><div class="arrow">›</div><div class="stop">金宝来取行李</div><div class="arrow">›</div><div class="stop">横琴口岸</div><div class="arrow">›</div><div class="stop">珠海站</div>
+        <div class="stop">金宝来酒店</div><div class="arrow">›</div><div class="stop">马庆康</div><div class="arrow">›</div><div class="stop">大堂前地喷泉</div><div class="arrow">›</div><div class="stop">大堂巷</div><div class="arrow">›</div><div class="stop">大三巴</div><div class="arrow">›</div><div class="stop">圣安多尼堂</div><div class="arrow">›</div><div class="stop">衣湾斜巷</div><div class="arrow">›</div><div class="stop">金宝来取行李</div><div class="arrow">›</div><div class="stop">横琴口岸</div><div class="arrow">›</div><div class="stop">珠海站</div>
       </div>
       <div class="timeline">
         <article class="event" id="your-route"><time class="time">10:30</time><div class="event-card"><h3>金宝来酒店出发</h3><p>酒店位于澳门国际机场对面，先退房并寄存行李；前往澳门半岛老城约15—20分钟车程。</p><div class="tags"><span class="tag">酒店已确定</span><span class="tag">氹仔鸡颈马路1048—1106号</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E9%87%91%E5%AE%9D%E6%9D%A5%E9%85%92%E5%BA%97">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">11:00</time><div class="event-card"><h3>马庆康南天咖啡室</h3><p>控制在40分钟内。建议点双蛋叉烧饭/滑蛋叉烧、星洲炒公仔面或西多士。</p><div class="tags"><span class="tag">早午餐</span><span class="tag">排队超20分钟就简化</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E9%A9%AC%E5%BA%86%E5%BA%B7%E5%8D%97%E5%A4%A9%E5%92%96%E5%95%A1%E5%AE%A4">打开高德导航 ↗</a></div></article>
-        <article class="event"><time class="time">11:45</time><div class="event-card optional"><h3>疯堂斜巷</h3><p>文艺街区快速散步拍照，停留约20分钟。时间紧张时第一个取消。</p><div class="tags"><span class="tag">待定景点</span><span class="tag pending">可取消</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E7%96%AF%E5%A0%82%E6%96%9C%E5%B7%B7%20%E6%BE%B3%E9%97%A8">打开高德导航 ↗</a></div></article>
-        <article class="event"><time class="time">12:20</time><div class="event-card"><h3>大三巴牌坊</h3><p>主景拍照约30分钟，不再延伸议事亭前地，避免返程堵车。</p><div class="tags"><span class="tag">必去</span><span class="tag">约30分钟</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E5%A4%A7%E4%B8%89%E5%B7%B4%E7%89%8C%E5%9D%8A">打开高德导航 ↗</a></div></article>
+        <article class="event"><time class="time">11:45</time><div class="event-card optional"><h3>大堂前地喷泉 → 大堂巷</h3><p>先拍喷泉和街巷环境，再向大三巴方向步行，合计约30分钟。</p><div class="tags"><span class="tag">拍照重点</span><span class="tag">步行串联</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://v.douyin.com/YYeHsvXCBWg/">打开澳门出片指南 ↗</a></div></article>
+        <article class="event"><time class="time">12:20</time><div class="event-card"><h3>大三巴牌坊（优衣库旁）</h3><p>主景拍照约30分钟，按出片指南取景，不再延伸议事亭前地。</p><div class="tags"><span class="tag">必去</span><span class="tag">约30分钟</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E5%A4%A7%E4%B8%89%E5%B7%B4%E7%89%8C%E5%9D%8A">打开高德导航 ↗</a></div></article>
+        <article class="event"><time class="time">13:00</time><div class="event-card optional"><h3>圣安多尼堂 → 衣湾斜巷</h3><p>老城西侧拍照段，停留约25分钟；时间紧张时保留圣安多尼堂，衣湾斜巷机动。</p><div class="tags"><span class="tag">拍照重点</span><span class="tag pending">衣湾斜巷可机动</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://v.douyin.com/YYeHsvXCBWg/">打开澳门出片指南 ↗</a></div></article>
         <article class="event"><time class="time">12:55</time><div class="event-card critical"><h3>老城 → 金宝来酒店</h3><p>游览结束后先回酒店取行李，不去银河；车程约15—20分钟。</p><div class="tags"><span class="tag must">你的主线</span></div></div></article>
         <article class="event" id="friend-route"><time class="time">13:30</time><div class="event-card optional"><h3>朋友演唱会支线：银河综艺馆</h3><p>朋友从金宝来酒店前往银河，14:00进行VIP报到及入场准备；此支线到演唱会开始即结束。</p><div class="tags"><span class="tag">朋友支线</span><span class="tag">你不参加</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%BE%B3%E9%97%A8%E9%93%B6%E6%B2%B3%E7%BB%BC%E8%89%BA%E9%A6%86">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">14:00—17:00</time><div class="event-card optional"><h3>你：自由活动 / 取行李</h3><p>建议最晚17:00回酒店取行李，随后前往横琴口岸；朋友支线到演唱会开始即结束，不安排朋友后续交通。</p><div class="tags"><span class="tag">你的主线</span><span class="tag must">17:00前取行李</span></div></div></article>
         <article class="event"><time class="time">17:00</time><div class="event-card critical"><h3>金宝来取行李 → 横琴口岸 → 珠海站</h3><p>按20:23发车倒排：建议17:00从酒店取行李出发，走横琴口岸，预留通关、前往珠海站和进站安检时间，目标19:30前到珠海站。</p><div class="tags"><span class="tag must">按车票倒排</span><span class="tag">目标19:30到站</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%A8%AA%E7%90%B4%E5%8F%A3%E5%B2%B8">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">20:23</time><div class="event-card critical"><h3>珠海 → 深圳北 · G6334</h3><p>20:23发车，22:15到深圳北；这是你的固定返程车票。朋友演唱会支线不延伸到此。</p><div class="tags"><span class="tag must">G6334</span><span class="tag must">20:23—22:15</span></div></div></article>
+      </div>
+    </section>
+
+    <section class="photo-guide" aria-label="拍照参考">
+      <div class="photo-guide-head"><div><span class="section-kicker">PHOTO NOTES</span><h2>拍照参考</h2></div><p>打开抖音链接看机位、姿势和现场构图；网页先保留为可点击参考入口。</p></div>
+      <div class="photo-links">
+        <a class="photo-link" href="https://v.douyin.com/fpwP5v1c13w/" target="_blank" rel="noopener"><span>路氹拍照</span><strong>新濠影汇机位</strong><small>抖音参考 · 点击打开 ↗</small></a>
+        <a class="photo-link" href="https://v.douyin.com/YYeHsvXCBWg/" target="_blank" rel="noopener"><span>半岛出片指南</span><strong>五个老城机位</strong><small>大三巴 · 大堂巷 · 喷泉 · 圣安多尼堂 · 衣湾斜巷 ↗</small></a>
       </div>
     </section>
 
@@ -338,9 +359,12 @@
       day2: [
         { n: 1, name: '金宝来酒店', x: 340, y: 369, tx: 355, ty: 354, nav: 'https://uri.amap.com/search?keyword=%E9%87%91%E5%AE%9D%E6%9D%A5%E9%85%92%E5%BA%97' },
         { n: 2, name: '马庆康', x: 245, y: 126, tx: 262, ty: 113, nav: 'https://uri.amap.com/search?keyword=%E9%A9%AC%E5%BA%86%E5%BA%B7%E5%8D%97%E5%A4%A9%E5%92%96%E5%95%A1%E5%AE%A4' },
-        { n: 3, name: '疯堂斜巷', x: 220, y: 166, tx: 237, ty: 183, nav: 'https://uri.amap.com/search?keyword=%E7%96%AF%E5%A0%82%E6%96%9C%E5%B7%B7%20%E6%BE%B3%E9%97%A8' },
-        { n: 4, name: '大三巴', x: 144, y: 179, tx: 103, ty: 210, nav: 'https://uri.amap.com/search?keyword=%E5%A4%A7%E4%B8%89%E5%B7%B4%E7%89%8C%E5%9D%8A' },
-        { n: 5, name: '银河', x: 282, y: 388, tx: 240, ty: 420, nav: 'https://uri.amap.com/search?keyword=%E6%BE%B3%E9%97%A8%E9%93%B6%E6%B2%B3%E7%BB%BC%E8%89%BA%E9%A6%86' }
+        { n: 3, name: '大堂前地喷泉', x: 220, y: 166, tx: 226, ty: 153, nav: 'https://uri.amap.com/search?keyword=%E5%A4%A7%E5%A0%82%E5%89%8D%E5%9C%B0%E5%96%B7%E6%B3%89' },
+        { n: 4, name: '大堂巷', x: 190, y: 205, tx: 198, ty: 220, nav: 'https://uri.amap.com/search?keyword=%E5%A4%A7%E5%A0%82%E5%B7%B7%E6%BE%B3%E9%97%A8' },
+        { n: 5, name: '大三巴', x: 144, y: 179, tx: 103, ty: 210, nav: 'https://uri.amap.com/search?keyword=%E5%A4%A7%E4%B8%89%E5%B7%B4%E7%89%8C%E5%9D%8A' },
+        { n: 6, name: '圣安多尼堂', x: 112, y: 245, tx: 70, ty: 260, nav: 'https://uri.amap.com/search?keyword=%E5%9C%A3%E5%AE%89%E5%A4%9A%E5%B0%BC%E5%A0%82%20%E6%BE%B3%E9%97%A8' },
+        { n: 7, name: '衣湾斜巷', x: 176, y: 286, tx: 187, ty: 303, nav: 'https://uri.amap.com/search?keyword=%E8%A1%A3%E6%B9%BE%E6%96%9C%E5%B7%B7%20%E6%BE%B3%E9%97%A8' },
+        { n: 8, name: '银河', x: 282, y: 388, tx: 240, ty: 420, nav: 'https://uri.amap.com/search?keyword=%E6%BE%B3%E9%97%A8%E9%93%B6%E6%B2%B3%E7%BB%BC%E8%89%BA%E9%A6%86' }
       ],
       return: [
         { n: 'A', name: '银河', x: 282, y: 388, tx: 240, ty: 420, nav: 'https://uri.amap.com/search?keyword=%E6%BE%B3%E9%97%A8%E9%93%B6%E6%B2%B3%E7%BB%BC%E8%89%BA%E9%A6%86' },
