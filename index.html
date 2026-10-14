@@ -205,6 +205,14 @@
     .route-option span { display: block; color: var(--day2); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
     .route-option strong { display: block; margin-top: 4px; font-size: .92rem; line-height: 1.35; }
     .route-option small { display: block; margin-top: 6px; color: var(--muted); font-size: .76rem; }
+    .day[data-day="2"] .timeline { grid-template-columns: minmax(0, 1.35fr) minmax(0, .85fr); column-gap: 16px; align-items: start; }
+    .day[data-day="2"] .timeline::before { left: calc(67.5% - 8px); top: 18px; bottom: 18px; }
+    .day[data-day="2"] .event { grid-column: 1; }
+    .day[data-day="2"] .event:nth-child(7) { grid-column: 2; grid-row: 1; }
+    .day[data-day="2"] .event:nth-child(8) { grid-column: 2; grid-row: 2; }
+    .day[data-day="2"] .event:nth-child(9) { grid-column: 1; grid-row: 7; }
+    .day[data-day="2"] .event:nth-child(10) { grid-column: 1; grid-row: 8; }
+    .day[data-day="2"] .event:nth-child(7) .event-card::before, .day[data-day="2"] .event:nth-child(8) .event-card::before { background: var(--day2); }
     .photo-guide { margin-top: 34px; padding: 20px; border: 1px solid #d8c4b4; border-radius: 18px; background: #fffaf3; }
     .photo-guide-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; }
     .photo-guide h2 { margin: 3px 0 0; font-family: Georgia, "Songti SC", serif; font-size: 1.7rem; }
@@ -216,7 +224,12 @@
     .photo-link span, .photo-link small { display: block; color: #806d61; font-size: .75rem; }
     .photo-link strong { display: block; margin: 8px 0 7px; font-size: 1.05rem; }
     @media (max-width: 760px) { .photo-guide-head, .photo-links { grid-template-columns: 1fr; display: grid; } }
-    @media (max-width: 760px) { .route-options { grid-template-columns: 1fr; } }
+    @media (max-width: 760px) {
+      .route-options { grid-template-columns: 1fr; }
+      .day[data-day="2"] .timeline { display: grid; grid-template-columns: 1fr; }
+      .day[data-day="2"] .timeline::before { left: 57px; }
+      .day[data-day="2"] .event, .day[data-day="2"] .event:nth-child(7), .day[data-day="2"] .event:nth-child(8), .day[data-day="2"] .event:nth-child(9), .day[data-day="2"] .event:nth-child(10) { grid-column: 1; grid-row: auto; }
+    }
     .footer { border-color: var(--line); }
   </style>
 </head>
@@ -308,6 +321,7 @@
         <article class="event"><time class="time">13:00</time><div class="event-card optional"><h3>圣安多尼堂 → 衣湾斜巷</h3><p>老城西侧拍照段，停留约25分钟；时间紧张时保留圣安多尼堂，衣湾斜巷机动。</p><div class="tags"><span class="tag">拍照重点</span><span class="tag pending">衣湾斜巷可机动</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://v.douyin.com/YYeHsvXCBWg/">打开澳门出片指南 ↗</a></div></article>
         <article class="event"><time class="time">12:55</time><div class="event-card critical"><h3>老城 → 金宝来酒店</h3><p>游览结束后先回酒店取行李，不去银河；车程约15—20分钟。</p><div class="tags"><span class="tag must">你的主线</span></div></div></article>
         <article class="event" id="friend-route"><time class="time">13:30</time><div class="event-card optional"><h3>朋友演唱会支线：银河综艺馆</h3><p>朋友从金宝来酒店前往银河，14:00进行VIP报到及入场准备；此支线到演唱会开始即结束。</p><div class="tags"><span class="tag">朋友支线</span><span class="tag">你不参加</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%BE%B3%E9%97%A8%E9%93%B6%E6%B2%B3%E7%BB%BC%E8%89%BA%E9%A6%86">打开高德导航 ↗</a></div></article>
+        <article class="event friend-finish"><time class="time">18:30</time><div class="event-card optional"><h3>朋友：演唱会开始</h3><p>朋友进入演唱会流程；你的路线不等待散场，各自行动。</p><div class="tags"><span class="tag">朋友支线终点</span></div></div></article>
         <article class="event"><time class="time">14:00—17:00</time><div class="event-card optional"><h3>你：自由活动 / 取行李</h3><p>建议最晚17:00回酒店取行李，随后前往横琴口岸；朋友支线到演唱会开始即结束，不安排朋友后续交通。</p><div class="tags"><span class="tag">你的主线</span><span class="tag must">17:00前取行李</span></div></div></article>
         <article class="event"><time class="time">17:00</time><div class="event-card critical"><h3>金宝来取行李 → 横琴口岸 → 珠海站</h3><p>按20:23发车倒排：建议17:00从酒店取行李出发，走横琴口岸，预留通关、前往珠海站和进站安检时间，目标19:30前到珠海站。</p><div class="tags"><span class="tag must">按车票倒排</span><span class="tag">目标19:30到站</span></div><a class="nav-link" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=%E6%A8%AA%E7%90%B4%E5%8F%A3%E5%B2%B8">打开高德导航 ↗</a></div></article>
         <article class="event"><time class="time">20:23</time><div class="event-card critical"><h3>珠海 → 深圳北 · G6334</h3><p>20:23发车，22:15到深圳北；这是你的固定返程车票。朋友演唱会支线不延伸到此。</p><div class="tags"><span class="tag must">G6334</span><span class="tag must">20:23—22:15</span></div></div></article>
